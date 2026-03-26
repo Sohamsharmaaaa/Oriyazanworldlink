@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OriyzaanProperties</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .coming {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .clock {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <h1>OriyzaanProperties</h1>
+
+    <div class="coming">Coming Soon...</div>
+
+    <div class="clock" id="clock"></div>
+
+    <p>We are working on our website.<br>Stay tuned for exciting updates.</p>
+
+    <footer>© 2026 OriyzaanProperties</footer>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').innerHTML =
+        now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
